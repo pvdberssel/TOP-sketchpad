@@ -76,8 +76,11 @@ function loadGrid() {
             }else{
                 grid.classList.remove('multiColor');
                 grid.style.backgroundColor = defaultColor;
+                let style = getComputedStyle(grid)
+                if(style.opacity < 1){
+                grid.style.opacity = parseFloat(style.opacity) + 0.1;
+                }
             }
-
         })
     })
 }
