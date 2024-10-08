@@ -73,6 +73,10 @@ function loadGrid() {
         grid.addEventListener('mouseenter', () => {
             if(state == 'multiColor'){
                 grid.classList.add('multiColor');
+                let style = getComputedStyle(grid)
+                if(style.opacity < 1){
+                grid.style.opacity = parseFloat(style.opacity) + 0.1;
+                }
             }else{
                 grid.classList.remove('multiColor');
                 grid.style.backgroundColor = defaultColor;
