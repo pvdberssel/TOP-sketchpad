@@ -1,6 +1,6 @@
 .grid-container {
-    width: 75vw;
-    height: 75vh;
+    width: 85vw;
+    height: 85vh;
     display: flex;
     margin: 50px;
     border-style: solid;
@@ -34,8 +34,6 @@ h1{
     display: flex;
     border-style: solid;
     border-color: black;
-    min-width: 10px;
-    min-height: 10px;
     flex: 1;
 
 
@@ -45,10 +43,45 @@ h1{
     border-style: solid;
     border-color: black;
     display: flex;
+    border-width:1px;
     background-color: antiquewhite;
     margin: 0px;
     padding: 0px;
     width: 100vw;
-    height: 50px;
+    height: 100px;
     justify-content: center;
+}
+
+.resize{
+    background-color: rgb(65, 98, 121);
+    border-radius: 10px;
+    color:white;
+    font-size:20px;
+}
+.color{
+    width:75px;
+    border-style: solid;
+    border-width:2px;
+}
+.green{
+    background-color: green;
+   
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+    
+}
+
+.purple{
+    background-color: purple;
+
+}
+
+.black{
+    background-color: black;
 }

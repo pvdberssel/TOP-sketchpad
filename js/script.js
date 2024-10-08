@@ -1,18 +1,29 @@
 createGrid(20);
+let defaultColor = 'black';
 loadGrid();
 const resizeButton = document.querySelector('.resize');
+
 
 
 resizeButton.addEventListener('click', () => {
     numberGrid=Number(prompt('How many squares per row and column?'));
     
-    while(numberGrid < 1 || numberGrid > 100){
-        numberGrid=Number(prompt('Make sure the value is larger than 0 and smaller than 100'));
+    while(numberGrid < 1 || numberGrid > 70){
+        numberGrid=Number(prompt('Make sure the value is larger than 0 and smaller than 70'));
     }
 
     removeGrid();
     createGrid(numberGrid);
     loadGrid();
+})
+
+const colorButton = document.querySelectorAll('.color')
+colorButton.forEach((button) => {
+    button.addEventListener('click', () => {
+  
+        defaultColor=button.classList[0];
+        loadGrid()
+    })
 })
 
 function createGrid(amount){
@@ -43,7 +54,8 @@ function loadGrid(){
 
     grids.forEach((grid) => {
         grid.addEventListener('mouseenter', () => {
-            grid.style.backgroundColor='black'
+            grid.style.backgroundColor=defaultColor;
+           
         })
     })
 }
