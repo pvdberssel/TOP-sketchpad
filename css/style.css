@@ -1,23 +1,27 @@
 .grid-container{
+    width: 100vw;
+    height: 100vh;
     display:flex;
-    justify-content: center;
-    align-items: center;
 }
+
 body{
-    margin:0px;
+    margin:500px;
 }
 
 .container{
-    display:flex;
+    display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: center;
 }
 
 .box{
+    display:flex;
     border-style: solid;
     border-color: black;
-    min-width: 100px;
-    min-height:100px;
+    min-width: 10px;
+    min-height: 10px;
+    flex: 1;
+    
 }
 
 .header{
@@ -26,7 +30,8 @@ body{
     display:flex;
     background-color: antiquewhite;
     margin:0px;
-    padding:20px;
-    height:100px;
+    padding:0px;
+    width:100vw;
+    height:50px;
     justify-content: center;
 }
